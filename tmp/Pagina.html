@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/stylespagina.css">
+    <title>Cursos</title>
+</head>
+<body>
+    <h1>Cursos</h1>
+    <h2>Hola {{.Persona.Nombre}}</h2>
+    <form method="POST" action="/pagina">
+        <h2>Inscribirme:</h2>
+        <input type="hidden" name="mail" value="{{.Persona.Mail}}">
+        <input type="hidden" name="id_persona" value="{{.Persona.ID}}">
+        <input type="hidden" name="action" value="inscribir">
+        {{range .Cursos}}
+        <div>
+            <input type="checkbox" name="curso" value="{{.ID}}"> {{.Nombre}} 
+        </div>
+        {{end}}
+        <div>
+            <button type="submit">Registrarse</button>
+        </div>
+    </form>
+    <form method="POST" action="/pagina">
+        <h2>Mis cursos</h2>
+        <input type="hidden" name="mail" value="{{.Persona.Mail}}">
+        <input type="hidden" name="id_persona" value="{{.Persona.ID}}">
+        <input type="hidden" name="action" value="actualizar">
+        {{range .MisCursos}}
+        <div>
+            <input type="checkbox" name="curso" value="{{.ID}}"> {{.Nombre}}
+        </div>
+        {{end}}
+        <div>
+            <button type="submit">Actualizar</button>
+        </div>
+    </form>
+</body>
+</html>

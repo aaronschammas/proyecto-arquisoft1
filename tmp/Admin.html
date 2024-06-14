@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styleAdmin.css">
+    <title>Administrador</title>
+</head>
+<body>
+    <h2>AGREGAR CURSOS</h2>
+    <form method="POST" action="/admin">
+        <input type="hidden" name="action" value="Registrar_Curso">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+            <label for="detalle">Detalle:</label>
+            <textarea id="detalle" name="detalle" required></textarea>
+        </div>
+        <div>
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" required>
+        </div>
+        <div>
+            <label for="horas_cursado">Horas Cursado:</label>
+            <input type="number" id="horas_cursado" name="horas_cursado" required>
+        </div>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <h2>Eleminar Cursos</h2>
+    <form method="POST" action="/admin">
+        <input type="hidden" name="action" value="Eleminar_Curso">
+        
+        {{range .Cursos}}
+        <div>
+            <input type="checkbox" name="curso" value="{{.ID}}"> {{.Nombre}}
+        </div>
+        {{end}}
+        
+        <div>
+            <button type="submit">Eleminar</button>
+        </div>
+    </form>
+</body>
+</html>
