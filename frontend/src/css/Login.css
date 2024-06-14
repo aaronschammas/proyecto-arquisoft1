@@ -1,0 +1,97 @@
+.login-page,
+.student-form-container,
+.register-page {
+  font-family: monaco, monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-image: url("../Images/pexels-pixabay-531880.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-container,
+.student-form {
+  background-color: rgba(192, 192, 192, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 395px;
+  width: 380px;
+}
+
+.register-container,
+.course-form {
+  background-color: rgba(192, 192, 192, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 480px;
+  width: 450px;
+}
+
+.login-container h2,
+.student-form h2,
+.course-form h2,
+.register-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-container .form-group,
+.student-form .form-group,
+.course-form .form-group,
+.register-container .form-group {
+  margin-bottom: 15px;
+}
+
+.login-container .form-group label,
+.student-form .form-group label,
+.course-form .form-group label,
+.register-container .form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.login-container .form-group input,
+.login-container .form-group select,
+.student-form .form-group input,
+.course-form .form-group input,
+.register-container .form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.login-container .btn-login,
+.student-form button,
+.course-form button,
+.register-container .btn-signup {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.register-container .btn-login {
+  background-color: #3d8b3f;
+  color: #fff;
+  padding: 8px;
+  width: 38%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 8px;
+}

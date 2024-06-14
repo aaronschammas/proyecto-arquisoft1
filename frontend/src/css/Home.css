@@ -1,0 +1,47 @@
+/* Home.css */
+.hero {
+  display: flex;
+  color: #ffffff;
+  height: 92vh;
+  padding-inline: 30px;
+  background-image: url("../Images/gox9.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-context {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hero-text {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  word-spacing: 1%;
+}
+
+.hero-description1 {
+  font-size: 1.9rem;
+  color: #d3d0d0;
+  max-width: 400px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.hero-description2 {
+  color: #9b9797;
+  font-size: 1.2rem;
+  max-width: 400px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.hero-image {
+  flex: 1;
+  background: url("Images/learning-management-system.webp") center;
+  background-size: 95%;
+  background-repeat: no-repeat;
+}
